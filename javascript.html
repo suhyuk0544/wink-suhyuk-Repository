@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="val">랜덤 값</div>
+    <button onclick="inner()">생성</button>
+
+    <script>
+        function inner() {
+            const rand = document.getElementById("val")
+            rand.innerHTML = "<p style='color:blue'>" + Math.random() +"</p>";
+        }
+
+
+    </script>
+</body>
+</html>

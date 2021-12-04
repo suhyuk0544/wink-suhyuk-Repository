@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div style="display: flex">
+    <input id="Name" placeholder="이름을 입력하세요">
+    <textarea id="input" placeholder="내용을 입력하세요"></textarea>
+    <button id="btn" onclick="post()">작성하기</button>
+    <div id="timeline"></div>
+</div>
+</body>
+    <script>
+        let timeline = document.querySelector('#timeline');
+
+        function post() {
+            const fName = document.querySelector('#Name').value;
+            const finput = document.querySelector('#input').value;
+            console.log('이름:', fName)
+            console.log('내용:', finput)
+
+            timeline.innerHTML += '<div id="timeline">' +
+                '<div class="container">' +
+                '           <h1>' + fName + '</h1>' +
+                '           <p>' + finput + '</p>' +
+                '       </div>' +
+                '   </div>'
+        }
+
+    </script>
+</html>
